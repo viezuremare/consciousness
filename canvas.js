@@ -241,7 +241,7 @@ function animate() {
             circle1.radius = 0;
 
             // Update Sub Text
-            instr.innerHTML = "CLICK TO INVITE YOUR NEXT TOUGHT"
+            instr.innerHTML = "CLICK TO INVITE YOUR NEXT THOUGHT"
                 if (circle2.radius > 50) {
                     circle2.radius -= 0.4
                 }   
