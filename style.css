@@ -14,7 +14,8 @@ body {
 .container { 
     text-align: center;
     padding: 0;
-    margin: 0;   
+    margin: 0;  
+    overflow: "scroll" 
 }
 
 #hidecanvas {
@@ -34,7 +35,7 @@ body {
     margin: 0;
     padding: 0;
     color: darkcyan;
-    font-size: 60px;
+    font-size: 33px;
     font-family: 'Arimo', monospace;
     animation: text 4s 1;
     -webkit-transition-property: color;
@@ -52,7 +53,7 @@ body {
     margin: 0;
     padding: 0;
     color: darkcyan;
-    font-size: 60px;
+    font-size: 33px;
     font-family: 'Arimo', monospace;
     -webkit-transition-property: color;
     -webkit-transition-duration: 0.5s;
@@ -69,7 +70,7 @@ body {
     margin: 0;
     padding: 0;
     color:white;
-    font-size: 60px;
+    font-size: 33px;
     font-family: 'Arimo', monospace;
     animation: text 4s 1;
     -webkit-transition-property: color;
