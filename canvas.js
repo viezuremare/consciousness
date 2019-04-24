@@ -7,8 +7,8 @@ const c = canvas.getContext('2d')
 // Instruction Text Variables
 const instr = document.getElementById('hide')
 
-// Mouse mapping Variables
-const mouse = {
+// Cursor mapping Variables
+const cursor = {
     x: undefined,
     y: undefined
 }
@@ -24,8 +24,8 @@ document.body.style.cursor = 'none';
 
 // Get Mouse Coordonates
 addEventListener('mousemove', event => {
-    mouse.x = event.clientX
-    mouse.y = event.clientY
+    cursor.x = event.clientX
+    cursor.y = event.clientY
 })
 
 // Resize Canvas on Page Resize
@@ -39,14 +39,14 @@ window.addEventListener('load', () => {
     instr.id = 'fadein'
 })
 
-
-addEventListener('touchmove', function(event) {
+// Add Touch Coordonates
+addEventListener('touchmove', (event) => {
   // If there's exactly one finger inside this element
   if (event.targetTouches.length == 1) {
     var touch = event.targetTouches[0];
     // Place element where the finger is
-    mouse.x = touch.pageX;
-    mouse.y = touch.pageY;
+    cursor.x = touch.pageX;
+    cursor.y = touch.pageY;
   }
 }, false);
 
@@ -66,7 +66,7 @@ function distance(x1, y1, x2, y2) {
 
 function responsive() {
     c.canvas.width = window.innerWidth - 10
-    c.canvas.height = window.innerHeight / 1.15
+    c.canvas.height = window.innerHeight / 1.2
     init()
 }
 
@@ -105,7 +105,7 @@ let circle1;
 let circle2;
 function init() {
     circle1 = new Circle(canvas.width / 2, canvas.height/2, canvas.width/900, 'pink');
-    circle2 = new Circle(mouse.x, mouse.y, canvas.width/13, 'white'); 
+    circle2 = new Circle(cursor.x, cursor.y, canvas.width/13, 'white'); 
 }
 
 
@@ -115,8 +115,8 @@ function animate() {
     c.clearRect(0, 0, canvas.width, canvas.height)
     circle1.update();
     circle2.update();
-    circle2.x = mouse.x;
-    circle2.y = mouse.y;
+    circle2.x = cursor.x;
+    circle2.y = cursor.y;
 
     // Create CONSCIOUSNESS - PUSH IT OUT Cursor Tag
     c.fillStyle = 'black'
@@ -173,9 +173,9 @@ function animate() {
         // Create Indication Arrow 1
         c.strokeStyle = 'lightskyblue'
         c.beginPath()
-        c.moveTo(circle1.x - 20, canvas.height - 160)
-        c.lineTo(circle1.x + 1, canvas.height - 165)
-        c.lineTo(circle1.x + 21, canvas.height - 160)
+        c.moveTo(circle1.x - 20, canvas.height - 120)
+        c.lineTo(circle1.x + 1, canvas.height - 125)
+        c.lineTo(circle1.x + 21, canvas.height - 120)
         c.stroke()
         c.closePath()
     }
@@ -185,9 +185,9 @@ function animate() {
         // Create Indication Arrow 2
         c.strokeStyle = 'lightskyblue'
         c.beginPath()
-        c.moveTo(circle1.x - 30, canvas.height - 180)
-        c.lineTo(circle1.x + 1, canvas.height - 187)
-        c.lineTo(circle1.x + 31, canvas.height - 180)
+        c.moveTo(circle1.x - 30, canvas.height - 140)
+        c.lineTo(circle1.x + 1, canvas.height - 147)
+        c.lineTo(circle1.x + 31, canvas.height - 140)
         c.stroke()
         c.closePath()
     }
@@ -197,9 +197,9 @@ function animate() {
         // Create Indication Arrow 3
         c.strokeStyle = 'lightskyblue'
         c.beginPath()
-        c.moveTo(circle1.x - 40, canvas.height - 200)
-        c.lineTo(circle1.x + 1, canvas.height - 210)
-        c.lineTo(circle1.x + 41, canvas.height - 200)
+        c.moveTo(circle1.x - 40, canvas.height - 160)
+        c.lineTo(circle1.x + 1, canvas.height - 170)
+        c.lineTo(circle1.x + 41, canvas.height - 160)
         c.stroke()
         c.closePath()
     }
