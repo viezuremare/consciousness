@@ -73,7 +73,7 @@ function distance(x1, y1, x2, y2) {
 
 function responsive() {
     c.canvas.width = window.innerWidth 
-    c.canvas.height = window.innerHeight / 1.165
+    c.canvas.height = window.innerHeight / 1.17
     init()
 }
 
