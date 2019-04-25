@@ -112,7 +112,7 @@ let circle1;
 let circle2;
 function init() {
     circle1 = new Circle(canvas.width / 2, canvas.height/2, canvas.width/900, 'pink');
-    circle2 = new Circle(cursor.x, cursor.y, canvas.height/19, 'white'); 
+    circle2 = new Circle(canvas.width / 1.5, canvas.height / 3, canvas.height/19, 'white'); 
 }
 
 
@@ -127,10 +127,10 @@ function animate() {
 
     // Create CONSCIOUSNESS - PUSH IT OUT Cursor Tag
     c.fillStyle = 'black'
-    c.font = `normal ${circle2.radius/2.6}px Arimo, monospace`
+    c.font = `normal ${circle2.radius/2.5}px Arimo, monospace`
     c.textAlign = 'center'
-    c.fillText("PUSH IT", circle2.x, circle2.y - circle2.radius/10 )
-    c.fillText("OUT", circle2.x, circle2.y + circle2.radius/1.7 )
+    c.fillText("Push It", circle2.x, circle2.y - circle2.radius/14 )
+    c.fillText("Out", circle2.x, circle2.y + circle2.radius/2 )
     c.textAlign = 'start'
 
     // Sub Text Fade out
@@ -226,8 +226,8 @@ function animate() {
         // Create YOUR THOUGHT Circle Cursor Tag
         c.fillStyle = 'black'
         c.textAlign = 'center'
-        c.font = `normal ${circle1.radius/4.5}px Arimo, monospace`
-        c.fillText("YOUR THOUGHT", circle1.x, circle1.y + 6)
+        c.font = `normal ${circle1.radius/4}px Arimo, monospace`
+        c.fillText("Your Thought", circle1.x, circle1.y + 2)
         c.textAlign = 'start'
 
         // Thought Circle Increase
@@ -322,7 +322,7 @@ setTimeout(() => {
     instr[i].classList.add('fadein') 
     }
     instr[0].innerHTML = ''
-    instr[1].innerHTML = 'Ask yourself'
+    instr[1].innerHTML = 'Ask yourself...'
 }, 8000);
 
 // Fade Out
@@ -362,7 +362,7 @@ setTimeout(() => {
     }
      //instr.id = 'fadein' 
      instr[0].innerHTML = ''
-     instr[1].innerHTML = 'Picture it'
+     instr[1].innerHTML = 'Picture it.'
  }, 18000); 
 
  
