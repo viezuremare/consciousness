@@ -112,7 +112,7 @@ let circle1;
 let circle2;
 function init() {
     circle1 = new Circle(canvas.width / 2, canvas.height/2, canvas.width/900, 'pink');
-    circle2 = new Circle(canvas.width / 1.5, canvas.height / 3, canvas.height/19, 'white'); 
+    circle2 = new Circle(canvas.width / 2.8, canvas.height / 2, canvas.height/19, 'white'); 
 }
 
 
@@ -280,7 +280,22 @@ function animate() {
             instr[0].innerHTML = "Click/Touch"
             instr[1].innerHTML ="to invite your next thought."
             
-            
+
+            // Listen for User Click Action
+            addEventListener('touchstart', () => {
+
+                // Materialize Thought
+                init()  
+                circle1.radius = 25
+
+                // Sub text Fade Out
+                for (let i = 0; i < instr.length; i++) {
+                instr[i].classList.remove('fadein')
+                instr[i].classList.add('fadeoutfast')  
+                }
+            })
+
+
             // Listen for User Click Action
             addEventListener('click', () => {
 
