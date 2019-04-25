@@ -5,7 +5,11 @@ const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
 // Instruction Text Variables
-const instr = document.getElementById('hide')
+const instruction = document.getElementsByClassName('hide')
+instr = Array.from(instruction)
+
+
+
 
 // Cursor mapping Variables
 const cursor = {
@@ -36,7 +40,10 @@ window.onload = function () {
 
 // Fade In Sub Text on Page Load
 window.addEventListener('load', () => {
-    instr.id = 'fadein'
+    for (let i = 0; i < instr.length; i++) {
+    instr[i].classList.remove("hide")
+    instr[i].classList.add("fadein")
+    }
 })
 
 // Add Touch Coordonates
@@ -66,7 +73,7 @@ function distance(x1, y1, x2, y2) {
 
 function responsive() {
     c.canvas.width = window.innerWidth - 10
-    c.canvas.height = window.innerHeight / 1.2
+    c.canvas.height = window.innerHeight / 1.23
     init()
 }
 
@@ -105,7 +112,7 @@ let circle1;
 let circle2;
 function init() {
     circle1 = new Circle(canvas.width / 2, canvas.height/2, canvas.width/900, 'pink');
-    circle2 = new Circle(cursor.x, cursor.y, canvas.width/13, 'white'); 
+    circle2 = new Circle(cursor.x, cursor.y, canvas.height/19, 'white'); 
 }
 
 
@@ -128,7 +135,10 @@ function animate() {
 
     // Sub Text Fade out
     if (circle1.radius > 30) {
-       instr.id ='fadeoutslow'
+        for (let i = 0; i < instr.length; i++) {
+        instr[i].classList.remove('fadein')
+        instr[i].classList.add('fadeoutslow')
+        }
     }  
 
     if (circle1.radius > 60) {
@@ -173,9 +183,9 @@ function animate() {
         // Create Indication Arrow 1
         c.strokeStyle = 'lightskyblue'
         c.beginPath()
-        c.moveTo(circle1.x - 20, canvas.height - 120)
-        c.lineTo(circle1.x + 1, canvas.height - 125)
-        c.lineTo(circle1.x + 21, canvas.height - 120)
+        c.moveTo(circle1.x - 20, canvas.height - 100)
+        c.lineTo(circle1.x + 1, canvas.height - 105)
+        c.lineTo(circle1.x + 21, canvas.height - 100)
         c.stroke()
         c.closePath()
     }
@@ -185,9 +195,9 @@ function animate() {
         // Create Indication Arrow 2
         c.strokeStyle = 'lightskyblue'
         c.beginPath()
-        c.moveTo(circle1.x - 30, canvas.height - 140)
-        c.lineTo(circle1.x + 1, canvas.height - 147)
-        c.lineTo(circle1.x + 31, canvas.height - 140)
+        c.moveTo(circle1.x - 30, canvas.height - 120)
+        c.lineTo(circle1.x + 1, canvas.height - 127)
+        c.lineTo(circle1.x + 31, canvas.height - 120)
         c.stroke()
         c.closePath()
     }
@@ -197,9 +207,9 @@ function animate() {
         // Create Indication Arrow 3
         c.strokeStyle = 'lightskyblue'
         c.beginPath()
-        c.moveTo(circle1.x - 40, canvas.height - 160)
-        c.lineTo(circle1.x + 1, canvas.height - 170)
-        c.lineTo(circle1.x + 41, canvas.height - 160)
+        c.moveTo(circle1.x - 40, canvas.height - 140)
+        c.lineTo(circle1.x + 1, canvas.height - 150)
+        c.lineTo(circle1.x + 41, canvas.height - 140)
         c.stroke()
         c.closePath()
     }
@@ -234,7 +244,10 @@ function animate() {
             // c.strokeText("F   O   C   U   S      O   N     I   T", 0, canvas.height - 10, canvas.width)
 
             // Sub Text Fade Out
-            instr.id = 'fadeoutfast' 
+            for (let i = 0; i < instr.length; i++) {
+            instr[i].classList.remove('fadein')
+            instr[i].classList.add('fadeoutfast') 
+            }
 
             // Thought Circle Moves Upward
             circle1.y -= circle1.velocity.y
@@ -252,14 +265,21 @@ function animate() {
             // Reset Thought Circle Radius
             circle1.radius = 0;
 
-            // Update Sub Text
-            instr.innerHTML = "Click to invite your next thought."
+            
                 if (circle2.radius > 50) {
                     circle2.radius -= 0.4
                 }   
 
             // Sub Text Fade In
-            instr.id = 'fadein'
+            for (let i = 0; i < instr.length; i++) {
+            instr[i].classList.remove('fadeoutfast')
+            instr[i].classList.add('fadein')
+            }
+            // Update Sub Text
+            
+            instr[0].innerHTML = "Click/Touch"
+            instr[1].innerHTML ="to invite your next thought."
+            
             
             // Listen for User Click Action
             addEventListener('click', () => {
@@ -269,7 +289,10 @@ function animate() {
                 circle1.radius = 25
 
                 // Sub text Fade Out
-                instr.id = 'fadeoutfast'  
+                for (let i = 0; i < instr.length; i++) {
+                instr[i].classList.remove('fadein')
+                instr[i].classList.add('fadeoutfast')  
+                }
             })
     }
 }
@@ -286,35 +309,60 @@ setTimeout(() => {
 
 // Fade Out Sub Text
 setTimeout(() => {
-    instr.id = 'fadeoutslow' 
+    for (let i = 0; i < instr.length; i++) {
+    instr[i].classList.remove('fadein')
+    instr[i].classList.add('fadeoutslow') 
+    }
  }, 4000);
 
 // Fade In
 setTimeout(() => {
-    instr.id = 'fadein' 
-    instr.innerText = 'Ask yourself'
+    for (let i = 0; i < instr.length; i++) {
+    instr[i].classList.remove('fadeoutslow')
+    instr[i].classList.add('fadein') 
+    }
+    instr[0].innerHTML = 'Ask'
+    instr[1].innerHTML = 'yourself'
 }, 8000);
 
 // Fade Out
 setTimeout(() => {
-    instr.id = 'fadeoutslow' 
+    for (let i = 0; i < instr.length; i++) {
+    instr[i].classList.remove('fadein') 
+    instr[i].classList.add('fadeoutslow')
+    }
+    //instr.id = 'fadeoutslow' 
  }, 10000);
 
  // Fade In
  setTimeout(() => {
-     instr.id = 'fadein' 
-     instr.innerText = '"What is my next thought?"'
+    for (let i = 0; i < instr.length; i++) {
+    instr[i].classList.remove('fadeoutslow')
+    instr[i].classList.add('fadein') 
+    }
+     //instr.id = 'fadein' 
+     instr[0].innerHTML = 'What is my next thought'
+     instr[1].innerHTML = '?'
  }, 12000);
  
  // Fade Out
  setTimeout(() => {
-    instr.id = 'fadeoutslow' 
+    for (let i = 0; i < instr.length; i++) {
+    instr[i].classList.remove('fadein') 
+    instr[i].classList.add('fadeoutslow')
+    }
+    //instr.id = 'fadeoutslow' 
  }, 15500);
  
  // Fade In
  setTimeout(() => {
-     instr.id = 'fadein' 
-     instr.innerText = 'Picture it'
+    for (let i = 0; i < instr.length; i++) {
+    instr[i].classList.remove('fadeoutslow')
+    instr[i].classList.add('fadein') 
+    }
+     //instr.id = 'fadein' 
+     instr[0].innerHTML = 'Picture'
+     instr[1].innerHTML = 'it'
  }, 18000); 
 
  
