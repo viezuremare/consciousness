@@ -73,7 +73,7 @@ function distance(x1, y1, x2, y2) {
 
 function responsive() {
     c.canvas.width = window.innerWidth - 10
-    c.canvas.height = window.innerHeight / 1.23
+    c.canvas.height = window.innerHeight / 1.14
     init()
 }
 
@@ -321,8 +321,8 @@ setTimeout(() => {
     instr[i].classList.remove('fadeoutslow')
     instr[i].classList.add('fadein') 
     }
-    instr[0].innerHTML = 'Ask'
-    instr[1].innerHTML = 'yourself'
+    instr[0].innerHTML = ''
+    instr[1].innerHTML = 'Ask yourself'
 }, 8000);
 
 // Fade Out
@@ -341,8 +341,8 @@ setTimeout(() => {
     instr[i].classList.add('fadein') 
     }
      //instr.id = 'fadein' 
-     instr[0].innerHTML = 'What is my next thought'
-     instr[1].innerHTML = '?'
+     instr[0].innerHTML = ''
+     instr[1].innerHTML = '"What is my next thought?"'
  }, 12000);
  
  // Fade Out
@@ -361,8 +361,8 @@ setTimeout(() => {
     instr[i].classList.add('fadein') 
     }
      //instr.id = 'fadein' 
-     instr[0].innerHTML = 'Picture'
-     instr[1].innerHTML = 'it'
+     instr[0].innerHTML = ''
+     instr[1].innerHTML = 'Picture it'
  }, 18000); 
 
  
