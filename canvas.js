@@ -72,8 +72,8 @@ function distance(x1, y1, x2, y2) {
 // Create Responsive Canvas 
 
 function responsive() {
-    c.canvas.width = window.innerWidth - 10
-    c.canvas.height = window.innerHeight / 1.16
+    c.canvas.width = window.innerWidth 
+    c.canvas.height = window.innerHeight / 1.165
     init()
 }
 
@@ -183,9 +183,9 @@ function animate() {
         // Create Indication Arrow 1
         c.strokeStyle = 'lightskyblue'
         c.beginPath()
-        c.moveTo(circle1.x - 20, canvas.height - 80)
-        c.lineTo(circle1.x + 1, canvas.height - 85)
-        c.lineTo(circle1.x + 21, canvas.height - 80)
+        c.moveTo(circle1.x - 20, canvas.height - 60)
+        c.lineTo(circle1.x + 1, canvas.height - 65)
+        c.lineTo(circle1.x + 21, canvas.height - 60)
         c.stroke()
         c.closePath()
     }
@@ -195,9 +195,9 @@ function animate() {
         // Create Indication Arrow 2
         c.strokeStyle = 'lightskyblue'
         c.beginPath()
-        c.moveTo(circle1.x - 30, canvas.height - 100)
-        c.lineTo(circle1.x + 1, canvas.height - 107)
-        c.lineTo(circle1.x + 31, canvas.height - 100)
+        c.moveTo(circle1.x - 30, canvas.height - 80)
+        c.lineTo(circle1.x + 1, canvas.height - 87)
+        c.lineTo(circle1.x + 31, canvas.height - 80)
         c.stroke()
         c.closePath()
     }
@@ -207,9 +207,9 @@ function animate() {
         // Create Indication Arrow 3
         c.strokeStyle = 'lightskyblue'
         c.beginPath()
-        c.moveTo(circle1.x - 40, canvas.height - 120)
-        c.lineTo(circle1.x + 1, canvas.height - 130)
-        c.lineTo(circle1.x + 41, canvas.height - 120)
+        c.moveTo(circle1.x - 40, canvas.height - 100)
+        c.lineTo(circle1.x + 1, canvas.height - 110)
+        c.lineTo(circle1.x + 41, canvas.height - 100)
         c.stroke()
         c.closePath()
     }
