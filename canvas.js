@@ -73,7 +73,7 @@ function distance(x1, y1, x2, y2) {
 
 function responsive() {
     c.canvas.width = window.innerWidth - 10
-    c.canvas.height = window.innerHeight / 1.14
+    c.canvas.height = window.innerHeight / 1.16
     init()
 }
 
@@ -112,7 +112,7 @@ let circle1;
 let circle2;
 function init() {
     circle1 = new Circle(canvas.width / 2, canvas.height/2, canvas.width/900, 'pink');
-    circle2 = new Circle(0, 0, canvas.height/19, 'white'); 
+    circle2 = new Circle(cursor.x, cursor.y, canvas.height/19, 'white'); 
 }
 
 
@@ -183,9 +183,9 @@ function animate() {
         // Create Indication Arrow 1
         c.strokeStyle = 'lightskyblue'
         c.beginPath()
-        c.moveTo(circle1.x - 20, canvas.height - 100)
-        c.lineTo(circle1.x + 1, canvas.height - 105)
-        c.lineTo(circle1.x + 21, canvas.height - 100)
+        c.moveTo(circle1.x - 20, canvas.height - 80)
+        c.lineTo(circle1.x + 1, canvas.height - 85)
+        c.lineTo(circle1.x + 21, canvas.height - 80)
         c.stroke()
         c.closePath()
     }
@@ -195,9 +195,9 @@ function animate() {
         // Create Indication Arrow 2
         c.strokeStyle = 'lightskyblue'
         c.beginPath()
-        c.moveTo(circle1.x - 30, canvas.height - 120)
-        c.lineTo(circle1.x + 1, canvas.height - 127)
-        c.lineTo(circle1.x + 31, canvas.height - 120)
+        c.moveTo(circle1.x - 30, canvas.height - 100)
+        c.lineTo(circle1.x + 1, canvas.height - 107)
+        c.lineTo(circle1.x + 31, canvas.height - 100)
         c.stroke()
         c.closePath()
     }
@@ -207,9 +207,9 @@ function animate() {
         // Create Indication Arrow 3
         c.strokeStyle = 'lightskyblue'
         c.beginPath()
-        c.moveTo(circle1.x - 40, canvas.height - 140)
-        c.lineTo(circle1.x + 1, canvas.height - 150)
-        c.lineTo(circle1.x + 41, canvas.height - 140)
+        c.moveTo(circle1.x - 40, canvas.height - 120)
+        c.lineTo(circle1.x + 1, canvas.height - 130)
+        c.lineTo(circle1.x + 41, canvas.height - 120)
         c.stroke()
         c.closePath()
     }
