@@ -112,7 +112,7 @@ let circle1;
 let circle2;
 function init() {
     circle1 = new Circle(canvas.width / 2, canvas.height/2, canvas.width/900, 'pink');
-    circle2 = new Circle(cursor.x, cursor.y, canvas.height/19, 'white'); 
+    circle2 = new Circle(0, 0, canvas.height/19, 'white'); 
 }
 
 
