@@ -4,6 +4,10 @@ html {
     margin: 0;
     height: 100%;
     padding: 0;
+    -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
 }
 
 body {
@@ -15,14 +19,10 @@ body {
 
 .container { 
     text-align: center;
-    font-size: 4.3vh;
+    font-size: 3.8vh;
     padding: 0;
     margin: 0;  
     overflow: "scroll" 
-}
-
-#hidecanvas {
-   display: none;
 }
 
 .hide {
@@ -30,6 +30,54 @@ body {
     padding: 0;
     color: darkcyan;
     transition-timing-function: ease-in-out;
+}
+
+#btnhide {
+    border: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 5vh;
+    z-index: 999;
+    background-color: transparent;
+    font-size: 2.5vh;
+    text-align: center;
+    color: transparent;
+    font-family: 'Arimo', 'Nanum Gothic','Gothic A1', 
+    'Noto Sans Cuneiform','Noto Sans Gothic', 
+    sans-serif;
+}
+
+#btnshow {
+    border: none;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 5vh;
+    z-index: 999;
+    background-color: transparent;
+    font-size: 2.5vh;
+    text-align: center;
+    color: rgba(236, 250, 247, 0.6);
+    font-family: 'Arimo', 'Nanum Gothic','Gothic A1', 
+    'Noto Sans Cuneiform','Noto Sans Gothic', 
+    sans-serif;
+    -webkit-transition-property: color;
+    -webkit-transition-duration: 3s;
+    -webkit-transition-delay: 2s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-property: color;
+    transition-duration: 3s;
+    transition-delay: 2s;
+    transition-timing-function: ease-in-out;
+}
+
+#btnshow:focus {
+    outline: none;
+  } 
+
+#btnhide:focus {
+    outline: none;
 }
     
 
@@ -72,7 +120,6 @@ body {
     padding: 0;
     color:white;
     font-family: 'Arimo', monospace;
-    animation: text 4s 1;
     -webkit-transition-property: color;
     -webkit-transition-duration: 1s;
     -webkit-transition-delay: 1s;
@@ -83,52 +130,5 @@ body {
     transition-timing-function: ease-in-out;
 }
 
-@media screen and (max-width : 320px) {
-    body {
-        font: 100px;
-    }
-}
 
 
-/* #instr2 {
-    padding: 0;
-    color: darkcyan;
-    font-size: 60px;
-    font-family: 'PT Sans', monospace;
-    -webkit-transition-property: color;
-    -webkit-transition-duration: 0.8s;
-    
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: color;
-    transition-duration: 0.8s;
-    
-    transition-timing-function: ease-in-out;
-} */
-
-
-    
-
-
-/* #instr1 {
-    margin: 0;
-    padding: 0;
-    color: white;
-    font-size: 60px;
-    font-family: 'PT Sans', monospace;
-    -webkit-transition-property: color;
-    -webkit-transition-duration: 3s;
-    -webkit-transition-delay: 1.5s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: color;
-    transition-duration: 3s;
-    transition-delay: 1.5s;
-    transition-timing-function: ease-in-out; 
-} */
-
-
-
-/* @keyframes text {
-    0%{
-        color: darkcyan;
-    }
-} */

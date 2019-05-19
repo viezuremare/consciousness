@@ -1,0 +1,210 @@
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+
+body {
+    background-color: darkcyan;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    color: white;
+    font-family: 'Arimo', 'Nanum Gothic','Gothic A1', 
+    'Noto Sans Cuneiform','Noto Sans Gothic', 
+    sans-serif;
+}
+
+#title {
+    height: 15vh;
+}
+
+#title h1 {
+    font-size: 2vw;
+    letter-spacing: 0.04em;
+    position: relative;
+    animation: heading 2.5s ease forwards;
+}
+
+@keyframes heading {
+    0% {top: -50vh}
+    100% {top: 9.9vh}
+}
+
+hr {
+    opacity: 0;
+    background-color: white;
+    height: 0.001em;
+    width: 15vw;
+    margin: 0 auto;
+    animation: textanimationfadeline 2s ease 3s forwards;
+}
+
+.container {
+    margin: auto;
+    padding: 1vh 22vw;
+    color: white;
+    line-height: 1;
+    font-size: 1.2vw;
+}
+
+#text1 { 
+    padding-top: 1vh;
+    opacity: 0;
+    left: -100vw;
+    position: relative;
+    animation: textanimationleft 3s ease 1s forwards,
+    textanimationfade 5s ease 1.9s forwards;
+}
+
+#b2 {
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    animation: textanimationfade 0.5s ease 7s forwards;
+}
+
+#text2 {
+    opacity: 0;
+    right: 100vw;
+    position: relative;
+    animation: textanimationright 3s ease 1.3s forwards,
+    textanimationfade 5s ease 2.3s forwards;
+}
+
+#b3 {
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    animation: textanimationfade 0.5s ease 7.2s forwards;
+}
+
+#text3 {
+    
+    opacity: 0;
+    left: -100vw;
+    position: relative;
+    animation: textanimationleft 3s ease 1.6s forwards,
+    textanimationfade 5s ease 2.7s forwards;
+}
+
+#b4 {
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    animation: textanimationfade 0.5s ease 7.4s forwards;
+}
+
+#text4 {
+    opacity: 0;
+    right: 100vw;
+    position: relative;
+    animation: textanimationright 3s ease 1.9s forwards,
+    textanimationfade 5s ease 3.1s forwards;
+}
+
+#b5 {
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    animation: textanimationfade 0.5s ease 7.6s forwards;
+}
+
+#text5 {
+    opacity: 0;
+    left: -100vw;
+    position: relative;
+    animation: textanimationleft 3s ease 2.2s forwards,
+    textanimationfade 5s ease 3.5s forwards;
+}
+
+#bmid {
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    animation: textanimationfade 0.5s ease 7.8s forwards;
+}
+
+#textmid {
+    
+    opacity: 0;
+    right: 100vw;
+    position: relative;
+    animation: textanimationright 3s ease 2.5s forwards,
+    textanimationfade 5s ease 3.9s forwards;
+}
+
+#bmid2 {
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    animation: textanimationfade 0.5s ease 8s forwards;
+}
+
+#textmid2 {
+    opacity: 0;
+    left: -100vw;
+    position: relative;
+    animation: textanimationleft 3s ease 2.8s forwards,
+    textanimationfade 5s ease 4.3s forwards;
+}
+
+#b6 {
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    animation: textanimationfade 0.5s ease 8.2s forwards;
+}
+
+#text6 {
+    opacity: 0;
+    right: 100vw;
+    position: relative;
+    animation: textanimationright 3s ease 3.1s forwards,
+    textanimationfade 5s ease 4.7s forwards;
+}
+
+#b7 {
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    animation: textanimationfade 0.5s ease 8.4s forwards;
+}
+
+#text7 {
+    opacity: 0;
+    left: -100vw;
+    position: relative;
+    animation: textanimationleft 3s ease 3.4s forwards,
+    textanimationfade 5s ease 5.1s forwards;
+}
+
+#text8 {
+    border: 1px solid white;
+    margin-top: 3vh;
+    padding: 1rem 2rem;
+    width: 20vw;
+    opacity: 0;
+    position: relative;
+    animation: textanimationfade 5s ease 8s forwards;
+}
+
+@keyframes textanimationleft {
+    0% { left: -100vw; }
+    100% { left: 0; }
+}
+
+@keyframes textanimationright {
+    0% { right: -100vw; }
+    100% { right: 0; }
+}
+
+@keyframes textanimationfade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes textanimationfadeline {
+    0% { opacity: 0; }
+    100% { opacity: 0.5; }
+}

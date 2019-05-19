@@ -8,7 +8,8 @@ const c = canvas.getContext('2d')
 const instruction = document.getElementsByClassName('hide')
 instr = Array.from(instruction)
 
-
+// Learn More Button
+const learnbtn = document.getElementById('btnhide')
 
 
 // Cursor mapping Variables
@@ -112,7 +113,7 @@ let circle1;
 let circle2;
 function init() {
     circle1 = new Circle(canvas.width / 2, canvas.height/2, canvas.width/900, 'pink');
-    circle2 = new Circle(canvas.width / 2.8, canvas.height / 2, canvas.height/19, 'white'); 
+    circle2 = new Circle(cursor.x, cursor.y, canvas.height/400, 'white'); 
 }
 
 
@@ -141,85 +142,53 @@ function animate() {
         }
     }  
 
-    if (circle1.radius > 60) {
-
-        // Create Canvas FOCUS ON IT Text
-        // let grd1 = c.createLinearGradient(0, 0, 100, 400);
-        
-        // grd1.addColorStop(0, "rgb(0,155,255)");
-        // grd1.addColorStop(1, "rgb(0,151,169)");
-     
-        // c.font = `normal 110px Arimo, monospace`
-        // c.fillStyle = grd1;
-        // c.fillText("F   O   C   U   S      O   N     I   T", 0, canvas.height - 10, canvas.width)
-    }
-
-    if (circle1.radius > 70) {
-
-        // Highlight Canvas FOCUS ON IT Text
-        // c.font = 'normal 110px Arimo, monospace'
-        // c.strokeStyle = 'cyan';
-        // c.strokeText("F   O   C   U   S      O   N     I   T", 0, canvas.height - 10, canvas.width)
-    }
-
-    if (circle1.radius > 73) {
-
-        // Create CLEAR YOUR MIND Cursor Tag 
-        // c.font = `normal ${circle2.radius/2}px Arimo, monospace`
-        // c.fillStyle = 'aliceblue'
-        // c.fillText("CLEAR YOUR MIND", circle2.x - circle2.radius - 239, circle2.y - circle2.radius)
-    }
-
-    if (circle1.radius > 76) {
-
-        // Create PUSH IT OUT Cursor Tag
-        // c.font = `normal ${circle2.radius/2}px Arimo, monospace`
-        // c.fillStyle = 'aliceblue'
-        // c.fillText("PUSH IT OUT", circle2.x - circle2.radius - 24, circle2.y + circle2.radius + 30)
-    }
-
-    if (circle1.radius > 77) {
+    if (circle1.radius > 80.5) {
 
         // Create Indication Arrow 1
         c.strokeStyle = 'lightskyblue'
         c.beginPath()
-        c.moveTo(circle1.x - 20, canvas.height - 60)
-        c.lineTo(circle1.x + 1, canvas.height - 65)
-        c.lineTo(circle1.x + 21, canvas.height - 60)
+        c.moveTo(circle1.x - 20, canvas.height - 200)
+        c.lineTo(circle1.x + 1, canvas.height - 205)
+        c.lineTo(circle1.x + 21, canvas.height - 200)
         c.stroke()
         c.closePath()
     }
 
-    if (circle1.radius > 78) {
+    if (circle1.radius > 81) {
 
         // Create Indication Arrow 2
         c.strokeStyle = 'lightskyblue'
         c.beginPath()
-        c.moveTo(circle1.x - 30, canvas.height - 80)
-        c.lineTo(circle1.x + 1, canvas.height - 87)
-        c.lineTo(circle1.x + 31, canvas.height - 80)
+        c.moveTo(circle1.x - 30, canvas.height -220)
+        c.lineTo(circle1.x + 1, canvas.height - 227)
+        c.lineTo(circle1.x + 31, canvas.height - 220)
         c.stroke()
         c.closePath()
     }
 
-    if (circle1.radius > 79) {
+    if (circle1.radius > 81.5) {
 
         // Create Indication Arrow 3
         c.strokeStyle = 'lightskyblue'
         c.beginPath()
-        c.moveTo(circle1.x - 40, canvas.height - 100)
-        c.lineTo(circle1.x + 1, canvas.height - 110)
-        c.lineTo(circle1.x + 41, canvas.height - 100)
+        c.moveTo(circle1.x - 40, canvas.height - 240)
+        c.lineTo(circle1.x + 1, canvas.height - 250)
+        c.lineTo(circle1.x + 41, canvas.height - 240)
         c.stroke()
         c.closePath()
     }
 
+    if (circle2.radius < 30) {
+        circle2.radius += 0.7
+    } else {
+        circle2.radius -= 0.001
+    }
 
      
-    if (circle1.radius < 50) {  
+    if (circle1.radius < 70) {  
 
         // Thought Circle Increase
-        circle1.radius += 0.30 
+        circle1.radius += 0.8 
 
     } else { 
 
@@ -227,21 +196,16 @@ function animate() {
         c.fillStyle = 'black'
         c.textAlign = 'center'
         c.font = `normal ${circle1.radius/4}px Arimo, monospace`
-        c.fillText("Your Thought", circle1.x, circle1.y + 2)
+        c.fillText("My Thought", circle1.x, circle1.y + 4)
         c.textAlign = 'start'
 
         // Thought Circle Increase
-        circle1.radius += 0.065;
+        circle1.radius += 0.05;
     }
     
     // If the circles touch 
     if (distance(circle1.x,circle1.y,circle2.x,circle2.y) < 
         circle1.radius + circle2.radius) {
-
-            // Hide Highlighting on Canvas FOCUS ON IT Text
-            // c.font = 'normal 110px Arimo, monospace'
-            // c.strokeStyle = 'darkcyan';
-            // c.strokeText("F   O   C   U   S      O   N     I   T", 0, canvas.height - 10, canvas.width)
 
             // Sub Text Fade Out
             for (let i = 0; i < instr.length; i++) {
@@ -253,7 +217,7 @@ function animate() {
             circle1.y -= circle1.velocity.y
 
             // Thought Circle Decrease  
-            circle1.radius -= 1
+            circle1.radius -= 0.8
 
             // Consciousness Circle Increase
             circle2.radius += 1.2       
@@ -266,7 +230,7 @@ function animate() {
             circle1.radius = 0;
 
             
-                if (circle2.radius > 50) {
+                if (circle2.radius > 40) {
                     circle2.radius -= 0.4
                 }   
 
@@ -275,10 +239,13 @@ function animate() {
             instr[i].classList.remove('fadeoutfast')
             instr[i].classList.add('fadein')
             }
+
             // Update Sub Text
-            
-            instr[0].innerHTML = "Click/Touch"
-            instr[1].innerHTML ="to invite your next thought."
+            instr[0].innerHTML = "Click anywhere"
+            instr[1].innerHTML = "and invite your next thought."
+
+            // Show Learn Button
+            learnbtn.id = 'btnshow'
             
 
             // Listen for User Click Action
