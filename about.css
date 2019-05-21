@@ -16,7 +16,7 @@ body {
 }
 
 #title {
-    height: 15vh;
+    height: 12vh;
 }
 
 #title h1 {
@@ -28,7 +28,7 @@ body {
 
 @keyframes heading {
     0% {top: -50vh}
-    100% {top: 9.9vh}
+    100% {top: 7vh}
 }
 
 hr {
@@ -45,7 +45,7 @@ hr {
     padding: 1vh 22vw;
     color: white;
     line-height: 1;
-    font-size: 1.2vw;
+    font-size: 1vw;
 }
 
 #text1 { 
@@ -181,7 +181,7 @@ hr {
 
 #text8 {
     border: 1px solid white;
-    margin-top: 3vh;
+    margin-top: 1vh;
     padding: 1rem 2rem;
     width: 20vw;
     opacity: 0;
