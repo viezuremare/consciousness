@@ -17,7 +17,7 @@ body {
   -moz-user-select: none; /* Firefox 2+ */
   -ms-user-select: none; /* IE 10+ */
   user-select: none; /* Standard syntax */
-  touch-action: none;
+  touch-action: pan-down, pan-up;
 }
 
 #title {
@@ -177,21 +177,29 @@ hr {
 }
 
 #text7 {
+    margin-top: 1vh;
+    margin-left: 10vw;
+    padding: 1rem 2rem;
     opacity: 0;
-    left: -100vw;
+    width: 18vw;
+    float: left;
     position: relative;
+    border: 1px solid white;
     animation: textanimationleft 3s ease 3.4s forwards,
-    textanimationfade 5s ease 5.1s forwards;
+    textanimationfade 4.8s ease 4.9s forwards;
 }
 
 #text8 {
-    border: 1px solid white;
     margin-top: 1vh;
+    margin-right: 10vw;
     padding: 1rem 2rem;
-    width: 20vw;
     opacity: 0;
+    width: 18vw;
+    float: right;
     position: relative;
-    animation: textanimationfade 5s ease 8s forwards;
+    border: 1px solid white;
+    animation: textanimationright 3s ease 3.4s forwards,
+    textanimationfade 4.9s ease 4.9s forwards;
 }
 
 @keyframes textanimationleft {
@@ -214,7 +222,53 @@ hr {
     100% { opacity: 0.5; }
 }
 
-@media all and (max-width: 600px) {
+/* Portrait */
+
+@media all and (device-height: 640px)
+            and (device-width: 384px) {
+    .container {
+        font-size:2vw;
+    }
+}
+
+@media all and (max-height: 500px) {
+    .container {
+        font-size: 2.4vh;
+        padding: 1vh 5vw;
+    }
+
+    #title h1 {
+        font-size: 6vw;
+    }
+
+    #title {
+        height: 8vh;
+    }
+
+    .dot {
+        display: none;
+    }
+
+    @keyframes heading {
+        0% {top: -50vh}
+        100% {top: 3vh}
+    }
+
+    #text8 {
+        margin-top: 1vh;
+        padding: 0.2rem 2rem;
+        margin-right: 4vw;
+    }
+
+    #text7 {
+        margin-top: 1vh;
+        padding: 0.2rem 2rem;
+        margin-left: 4vw;
+    }
+}
+
+@media all and (max-width: 500px)
+            and (min-height: 630px) {
     .container {
         padding: 1.1vw 7vw;
         font-size: 3.6vw;
@@ -235,45 +289,23 @@ hr {
 
     @keyframes heading {
         0% {top: -50vh}
-        100% {top: 2.5vh}
+        100% {top: 3.6vh}
     }
 
     #text8 {
-        margin-top: 0.5vh;
-        padding: 0.5rem 2rem;
+        margin-top: 1vh;
+        padding: 0.2rem 2rem;
+        margin-right: 9vw;
+    }
+
+    #text7 {
+        margin-top: 1vh;
+        padding: 0.2rem 2rem;
+        margin-left: 9vw;
     }
 }
 
-@media all and (orientation: landscape) {
-        @keyframes heading {
-            0% {top: -50vh}
-            100% {top: 4vh}
-        }  
-        
-        .container {
-            font-size: 1.6vw;
-            padding: 1.1vh 10vw;
-            margin: 0 auto;
-            line-height: 3.5vh;
-        }
-
-        #text8 {
-            margin-top: 0.9vh;
-            padding: 0.2rem 2rem;
-        }
-
-        .dot {
-            display: none;
-        }
-
-        #title h1 {
-            font-size: 3vw;
-        }
-
-        #title {
-            height: 11vh;
-        }
-}
+/* Tablets */
 
 @media all and (max-width: 800px)
             and (min-width: 610px)
@@ -293,50 +325,11 @@ hr {
     }
 
     #title h1 {
-        font-size: 8vw;
+        font-size: 7vw;
     }
 
     #title {
-        height: 12vh;
-    }
-
-    @keyframes heading {
-        0% {top: -50vh}
-        100% {top: 1vh}
-    }
-
-    #text8 {
-        margin-top: 0.5vh;
-        padding: 1rem 2rem;
-    }
-}    
-
-/* @media all and (max-width: 800px)
-            and (min-width: 610px)
-            and (min-height: 1024px)
-            and (max-height: 1280px)
-            and (orientation: landscape) {
-    .container {
-        font-size: 3vw;
-        padding: 1vh 10vw;
-        margin: 0 auto;
-    }
-
-    #text8 {
-        margin-top: 0;
-        padding: 1rem 2rem;
-    }
-
-    .dot {
-       display: none;
-    }
-
-    #title h1 {
-        font-size: 4vw;
-    }
-
-    #title {
-        height: 7vh;
+        height: 10vh;
     }
 
     @keyframes heading {
@@ -344,4 +337,98 @@ hr {
         100% {top: 3vh}
     }
 
-} */
+    #text8 {
+        margin-top: 1vh;
+        margin-right: 5vw;
+    }
+
+    #text7 {
+        margin-top: 1vh;
+        margin-left: 5vw;
+    }
+}    
+
+/* Landscape */
+
+@media all and (orientation: landscape) {
+        @keyframes heading {
+            0% {top: -50vh}
+            100% {top: 4vh}
+        }  
+        
+        .container {
+            font-size: 1.6vw;
+            padding: 1.1vh 10vw;
+            margin: 0 auto;
+            line-height: 3.5vh;
+        }
+
+        #text8 {
+            margin-top: 1vh;
+            padding: 0.2rem 1rem;
+            margin-right: 16vw;
+        }
+    
+        #text7 {
+            margin-top: 1vh;
+            padding: 0.2rem 1rem;
+            margin-left: 16vw;
+        }
+
+        .dot {
+            display: none;
+        }
+
+        #title h1 {
+            font-size: 3vw;
+        }
+
+        #title {
+            height: 11vh;
+        }
+}
+
+
+/* Desktop */
+
+@media all and (min-width: 1500px) {
+    .container {
+        margin: auto;
+        padding: 1vh 22vw;
+        color: white;
+        line-height: 1;
+        font-size: 1vw;
+    }
+
+    #text7 {
+        margin-top: 1vh;
+        margin-left: 10vw;
+        padding: 1rem 2rem;
+        opacity: 0;
+        width: 18vw;
+        float: left;
+        position: relative;
+        border: 1px solid white;
+        animation: textanimationleft 3s ease 3.4s forwards,
+        textanimationfade 4.8s ease 4.9s forwards;
+    }
+    
+    #text8 {
+        margin-top: 1vh;
+        margin-right: 10vw;
+        padding: 1rem 2rem;
+        opacity: 0;
+        width: 18vw;
+        float: right;
+        position: relative;
+        border: 1px solid white;
+        animation: textanimationright 3s ease 3.4s forwards,
+        textanimationfade 4.9s ease 4.9s forwards;
+    }
+
+    .dot {
+        display: inline;
+    }
+}
+
+
