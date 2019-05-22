@@ -17,6 +17,7 @@ body {
   -moz-user-select: none; /* Firefox 2+ */
   -ms-user-select: none; /* IE 10+ */
   user-select: none; /* Standard syntax */
+  touch-action: none;
 }
 
 #title {
@@ -212,3 +213,135 @@ hr {
     0% { opacity: 0; }
     100% { opacity: 0.5; }
 }
+
+@media all and (max-width: 600px) {
+    .container {
+        padding: 1.1vw 7vw;
+        font-size: 3.6vw;
+        line-height: 3.9vw;
+    }
+    
+    .dot {
+       display: none;
+    }
+
+    #title h1 {
+        font-size: 8vw;
+    }
+
+    #title {
+        height: 9vh;
+    }
+
+    @keyframes heading {
+        0% {top: -50vh}
+        100% {top: 2.5vh}
+    }
+
+    #text8 {
+        margin-top: 0.5vh;
+        padding: 0.5rem 2rem;
+    }
+}
+
+@media all and (orientation: landscape) {
+        @keyframes heading {
+            0% {top: -50vh}
+            100% {top: 4vh}
+        }  
+        
+        .container {
+            font-size: 1.6vw;
+            padding: 1.1vh 10vw;
+            margin: 0 auto;
+            line-height: 3.5vh;
+        }
+
+        #text8 {
+            margin-top: 0.9vh;
+            padding: 0.2rem 2rem;
+        }
+
+        .dot {
+            display: none;
+        }
+
+        #title h1 {
+            font-size: 3vw;
+        }
+
+        #title {
+            height: 11vh;
+        }
+}
+
+@media all and (max-width: 800px)
+            and (min-width: 610px)
+             and (min-height: 1024px)
+              and (max-height: 1280px) {
+    .container {
+        padding: 1vw 7vw;
+        font-size: 2.8vw;
+        line-height: 3.5vw;
+    }
+
+    .dot {
+        font-size: 0.1vw;
+        padding: 0;
+        margin: 0;
+        display: none;
+    }
+
+    #title h1 {
+        font-size: 8vw;
+    }
+
+    #title {
+        height: 12vh;
+    }
+
+    @keyframes heading {
+        0% {top: -50vh}
+        100% {top: 1vh}
+    }
+
+    #text8 {
+        margin-top: 0.5vh;
+        padding: 1rem 2rem;
+    }
+}    
+
+/* @media all and (max-width: 800px)
+            and (min-width: 610px)
+            and (min-height: 1024px)
+            and (max-height: 1280px)
+            and (orientation: landscape) {
+    .container {
+        font-size: 3vw;
+        padding: 1vh 10vw;
+        margin: 0 auto;
+    }
+
+    #text8 {
+        margin-top: 0;
+        padding: 1rem 2rem;
+    }
+
+    .dot {
+       display: none;
+    }
+
+    #title h1 {
+        font-size: 4vw;
+    }
+
+    #title {
+        height: 7vh;
+    }
+
+    @keyframes heading {
+        0% {top: -50vh}
+        100% {top: 3vh}
+    }
+
+} */

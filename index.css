@@ -15,6 +15,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: darkcyan; 
+    touch-action: none;
 }
 
 .container { 
@@ -22,7 +23,6 @@ body {
     font-size: 3.8vh;
     padding: 0;
     margin: 0;  
-    overflow: "scroll" 
 }
 
 .hide {
