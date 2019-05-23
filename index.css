@@ -93,15 +93,15 @@ body {
 }
 
 #stwoanim {
-    animation: colortext 5s ease-in-out;
+    animation: colortext 9s ease-in-out 1s infinite;
 }
 
 @keyframes colortext {
     0% { color: darkcyan; }
-    43% { color: darkcyan; }
-    50% { color: cyan; }
-    67% { color: white; }
-    100% { color: white; }
+    40% { color: cyan; }
+    60% { color: cyan; }
+    70% { color: cyan; }
+    100% { color: darkcyan; }
 }
     
 
