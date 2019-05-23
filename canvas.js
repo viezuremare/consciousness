@@ -8,6 +8,13 @@ const c = canvas.getContext('2d')
 const instruction = document.getElementsByClassName('hide')
 instr = Array.from(instruction)
 
+// Sub Text Div Variables
+const subtextdiv = document.getElementById('subtextdiv')
+
+// Sub Text Line Two 
+const stwo = document.getElementById('stwo')
+
+
 // Learn More Button
 const learnbtn = document.getElementById('btnhide')
 
@@ -142,38 +149,38 @@ function animate() {
         }
     }  
 
-    if (circle1.radius > 80.5) {
+    if (circle1.radius > 77) {
 
         // Create Indication Arrow 1
-        c.strokeStyle = 'lightskyblue'
+        c.strokeStyle = 'rgb(139,0,0)'
         c.beginPath()
-        c.moveTo(circle1.x - 20, canvas.height - 200)
-        c.lineTo(circle1.x + 1, canvas.height - 205)
-        c.lineTo(circle1.x + 21, canvas.height - 200)
+        c.moveTo(circle1.x - 10, circle1.y + 70)
+        c.lineTo(circle1.x + 1, circle1.y + 67.8)
+        c.lineTo(circle1.x + 11, circle1.y + 70)
         c.stroke()
         c.closePath()
     }
 
-    if (circle1.radius > 81) {
+    if (circle1.radius > 77.5) {
 
         // Create Indication Arrow 2
-        c.strokeStyle = 'lightskyblue'
+        c.strokeStyle = 'rgb(139,0,0)'
         c.beginPath()
-        c.moveTo(circle1.x - 30, canvas.height -220)
-        c.lineTo(circle1.x + 1, canvas.height - 227)
-        c.lineTo(circle1.x + 31, canvas.height - 220)
+        c.moveTo(circle1.x - 15, circle1.y + 60)
+        c.lineTo(circle1.x + 1, circle1.y + 57)
+        c.lineTo(circle1.x + 16, circle1.y + 60)
         c.stroke()
         c.closePath()
     }
 
-    if (circle1.radius > 81.5) {
+    if (circle1.radius > 78) {
 
         // Create Indication Arrow 3
-        c.strokeStyle = 'lightskyblue'
+        c.strokeStyle = 'rgb(139,0,0)'
         c.beginPath()
-        c.moveTo(circle1.x - 40, canvas.height - 240)
-        c.lineTo(circle1.x + 1, canvas.height - 250)
-        c.lineTo(circle1.x + 41, canvas.height - 240)
+        c.moveTo(circle1.x - 20, circle1.y + 50)
+        c.lineTo(circle1.x + 1, circle1.y + 46)
+        c.lineTo(circle1.x + 21, circle1.y + 50)
         c.stroke()
         c.closePath()
     }
@@ -200,7 +207,7 @@ function animate() {
         c.textAlign = 'start'
 
         // Thought Circle Increase
-        circle1.radius += 0.05;
+        circle1.radius += 0.04;
     }
     
     // If the circles touch 
@@ -241,15 +248,22 @@ function animate() {
             }
 
             // Update Sub Text
-            instr[0].innerHTML = "Click anywhere"
-            instr[1].innerHTML = "and invite your next thought."
+            instr[0].innerHTML = "Ask for your next thought."
+            instr[1].innerHTML = "Click here to materialize."
+
+            // Sub Text Div Border Show
+            stwo.id = 'stwoanim'
 
             // Show Learn Button
             learnbtn.id = 'btnshow'
             
+            // Mouse Enter Sub Text Div
+            subtextdiv.addEventListener('mouseover',() => {
+                subtextdiv.style.cursor = 'pointer';
+            })
 
             // Listen for User Click Action
-            addEventListener('touchstart', () => {
+            subtextdiv.addEventListener('touchstart', () => {
 
                 // Materialize Thought
                 init()  
@@ -264,7 +278,7 @@ function animate() {
 
 
             // Listen for User Click Action
-            addEventListener('click', () => {
+           subtextdiv.addEventListener('click', () => {
 
                 // Materialize Thought
                 init()  
