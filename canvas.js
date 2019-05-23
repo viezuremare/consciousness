@@ -12,7 +12,7 @@ instr = Array.from(instruction)
 const subtextdiv = document.getElementById('subtextdiv')
 
 // Sub Text Line Two 
-const stwo = document.getElementById('stwo')
+const stextOne = document.getElementById('stextone')
 
 
 // Learn More Button
@@ -248,11 +248,11 @@ function animate() {
             }
 
             // Update Sub Text
-            instr[0].innerHTML = "Ask for your next thought."
-            instr[1].innerHTML = "Click here to materialize."
+            instr[0].innerHTML = "Ask for the next thought"
+            instr[1].innerHTML = ""
 
             // Sub Text Div Border Show
-            stwo.id = 'stwoanim'
+            stextOne.id = 'stextanim'
 
             // Show Learn Button
             learnbtn.id = 'btnshow'
@@ -268,6 +268,7 @@ function animate() {
                 // Materialize Thought
                 init()  
                 circle1.radius = 25
+                stextOne.id = 'stextone'
 
                 // Sub text Fade Out
                 for (let i = 0; i < instr.length; i++) {
@@ -283,6 +284,7 @@ function animate() {
                 // Materialize Thought
                 init()  
                 circle1.radius = 25
+                stextOne.id = 'stextone'
 
                 // Sub text Fade Out
                 for (let i = 0; i < instr.length; i++) {

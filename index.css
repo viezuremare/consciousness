@@ -19,7 +19,7 @@ body {
 
 .container { 
     text-align: center;
-    font-size: 3.7vh;
+    font-size: 3.5vh;
     padding: 0;
     margin: 0;  
 }
@@ -56,27 +56,42 @@ body {
     left: 50%;
     top: 100%;
     margin-left: -30vw;
-    margin-top: 2vh;
+    margin-top: 3vh;
     padding: 0;
     width: 60vw;
     height: 3.4vh;
     z-index: 999;
     background-color: transparent;
     font-size: 2.5vh;
+    opacity: 0;
     text-align: center;
-    opacity: 1;
     color: rgba(236, 250, 247, 0.6);
     font-family: 'Arimo', 'Nanum Gothic','Gothic A1', 
     'Noto Sans Cuneiform','Noto Sans Gothic', 
     sans-serif;
-    -webkit-transition-property: opacity;
+    /* -webkit-transition-property: opacity;
     -webkit-transition-duration: 3s;
-    -webkit-transition-delay: 2s;
+    -webkit-transition-delay: 6s;
     -webkit-transition-timing-function: ease-in-out;
     transition-property: opacity;
     transition-duration: 3s;
-    transition-delay: 2s;
-    transition-timing-function: ease-in-out;
+    transition-delay: 6s;
+    transition-timing-function: ease-in-out; */
+    animation: textbackcolor 5s ease-in-out 5s infinite,
+    textopacity 3s ease-in-out 6s forwards;
+    -webkit-animation: textbackcolor 5s ease-in-out 5s infinite,
+    textopacity 3s ease-in-out 6s forwards;
+}
+
+@keyframes textbackcolor {
+    0% { background-color: darkcyan; }
+    50% { background-color: rgba(0, 255, 255, 0.1); } 
+    100% { background-color: darkcyan; }
+}
+
+@keyframes textopacity {
+    0% { opacity: 0; }
+    100% { opacity: 1; } 
 }
 
 #btnshow:focus {
@@ -92,16 +107,20 @@ body {
   background-color: rgba(23, 131, 131, 0.5);
 }
 
-#stwoanim {
-    animation: colortext 9s ease-in-out 1s infinite;
+#stextanim {
+    animation: texttransparent 6s ease-in-out 1s infinite;
 }
 
-@keyframes colortext {
-    0% { color: darkcyan; }
-    40% { color: cyan; }
-    60% { color: cyan; }
-    70% { color: cyan; }
-    100% { color: darkcyan; }
+#stextanim:hover {
+    background-color: rgba(3, 95, 95, 0.2);
+}
+
+@keyframes texttransparent {
+    0% { opacity: 0; }
+    30% { opacity: 1; }
+    60% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0; }
 }
     
 
