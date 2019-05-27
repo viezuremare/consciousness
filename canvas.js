@@ -248,7 +248,7 @@ function animate() {
             }
 
             // Update Sub Text
-            instr[0].innerHTML = "Ask for the next thought"
+            instr[0].innerHTML = "Click for the next thought"
             instr[1].innerHTML = ""
 
             // Sub Text Div Border Show
