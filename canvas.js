@@ -48,10 +48,14 @@ window.onload = function () {
 
 // Fade In Sub Text on Page Load
 window.addEventListener('load', () => {
-    for (let i = 0; i < instr.length; i++) {
-    instr[i].classList.remove("hide")
-    instr[i].classList.add("fadein")
-    }
+
+    setTimeout(() => {
+        for (let i = 0; i < instr.length; i++) {
+            instr[i].classList.remove("hide")
+            instr[i].classList.add("fadein")
+        }
+    }, 3000);
+    
 })
 
 // Add Touch Coordonates
@@ -300,7 +304,7 @@ function animate() {
 setTimeout(() => {   
     init()
     animate()  
-}, 22000);
+}, 27000);
 
 
 // Start Instruction Sub Text
@@ -311,7 +315,7 @@ setTimeout(() => {
     instr[i].classList.remove('fadein')
     instr[i].classList.add('fadeoutslow') 
     }
- }, 4000);
+ }, 9000);
 
 // Fade In
 setTimeout(() => {
@@ -321,7 +325,7 @@ setTimeout(() => {
     }
     instr[0].innerHTML = ''
     instr[1].innerHTML = 'Ask yourself...'
-}, 8000);
+}, 13000);
 
 // Fade Out
 setTimeout(() => {
@@ -330,7 +334,7 @@ setTimeout(() => {
     instr[i].classList.add('fadeoutslow')
     }
     //instr.id = 'fadeoutslow' 
- }, 10000);
+ }, 15000);
 
  // Fade In
  setTimeout(() => {
@@ -341,7 +345,7 @@ setTimeout(() => {
      //instr.id = 'fadein' 
      instr[0].innerHTML = ''
      instr[1].innerHTML = '"What is my next thought?"'
- }, 12000);
+ }, 17000);
  
  // Fade Out
  setTimeout(() => {
@@ -350,7 +354,7 @@ setTimeout(() => {
     instr[i].classList.add('fadeoutslow')
     }
     //instr.id = 'fadeoutslow' 
- }, 15500);
+ }, 20500);
  
  // Fade In
  setTimeout(() => {
@@ -361,7 +365,7 @@ setTimeout(() => {
      //instr.id = 'fadein' 
      instr[0].innerHTML = ''
      instr[1].innerHTML = 'Picture it.'
- }, 18000); 
+ }, 23000); 
 
  
 
