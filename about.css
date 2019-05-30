@@ -202,6 +202,14 @@ hr {
     textanimationfade 4.9s ease 4.9s forwards;
 }
 
+#text9 {
+    margin-top: 1vh;
+    padding: 0.2rem 1rem;
+    opacity: 0;
+    position: relative;
+    animation: textanimationfade 5s ease 7s forwards;
+}
+
 @keyframes textanimationleft {
     0% { left: -100vw; }
     100% { left: 0; }
@@ -224,11 +232,36 @@ hr {
 
 /* Portrait */
 
+
+
 @media all and (device-height: 640px)
             and (device-width: 384px) {
+
     .container {
-        font-size:2vw;
+        font-size: 1vw;
+        line-height: 0.5vh;
     }
+
+    @keyframes heading {
+        0% {top: -50vh}
+        100% {top: 1vh}
+    }
+
+    #text8 {
+        margin-top: 0.1vh;
+        padding: 0;
+        margin-right: 1vw;
+    }
+
+    #text7 {
+        margin-top: 0.1vh;
+        padding: 0;
+        margin-left: 1vw;
+    } 
+
+    #text9 {
+        padding-top: 1vh;
+    } 
 }
 
 @media all and (max-height: 500px) {
@@ -242,7 +275,7 @@ hr {
     }
 
     #title {
-        height: 8vh;
+        height: 7vh;
     }
 
     .dot {
@@ -251,19 +284,26 @@ hr {
 
     @keyframes heading {
         0% {top: -50vh}
-        100% {top: 3vh}
+        100% {top: 2.1vh}
     }
 
     #text8 {
         margin-top: 1vh;
-        padding: 0.2rem 2rem;
+        padding: 0.2rem 1rem;
         margin-right: 4vw;
+        width: 30vw;
     }
 
     #text7 {
         margin-top: 1vh;
-        padding: 0.2rem 2rem;
+        padding: 0.2rem 1rem;
         margin-left: 4vw;
+        width: 30vw;
+    }
+
+    #text9 {
+        padding-top: 1vh;
+        clear: both;
     }
 }
 
@@ -280,16 +320,16 @@ hr {
     }
 
     #title h1 {
-        font-size: 8vw;
+        font-size: 7vw;
     }
 
     #title {
-        height: 9vh;
+        height: 8vh;
     }
 
     @keyframes heading {
         0% {top: -50vh}
-        100% {top: 3.6vh}
+        100% {top: 3.3vh}
     }
 
     #text8 {
@@ -303,6 +343,11 @@ hr {
         padding: 0.2rem 2rem;
         margin-left: 9vw;
     }
+
+    #text9 {
+        padding-top: 1vh;
+        clear: both;
+    }
 }
 
 /* Tablets */
@@ -314,7 +359,7 @@ hr {
     .container {
         padding: 1vw 7vw;
         font-size: 2.8vw;
-        line-height: 3.5vw;
+        line-height: 3.3vw;
     }
 
     .dot {
@@ -325,26 +370,33 @@ hr {
     }
 
     #title h1 {
-        font-size: 7vw;
+        font-size: 5vw;
     }
 
     #title {
-        height: 10vh;
+        height: 8vh;
     }
 
     @keyframes heading {
         0% {top: -50vh}
-        100% {top: 3vh}
+        100% {top: 3.5vh}
     }
 
     #text8 {
         margin-top: 1vh;
         margin-right: 5vw;
+        width: 30vw;
     }
 
     #text7 {
         margin-top: 1vh;
         margin-left: 5vw;
+        width: 30vw;
+    }
+
+    #text9 {
+        padding-top: 1vh;
+        clear: both;
     }
 }    
 
@@ -366,13 +418,15 @@ hr {
         #text8 {
             margin-top: 1vh;
             padding: 0.2rem 1rem;
-            margin-right: 16vw;
+            margin-right: 6vw;
+            width: 20vw;
         }
     
         #text7 {
             margin-top: 1vh;
             padding: 0.2rem 1rem;
-            margin-left: 16vw;
+            margin-left: 6vw;
+            width: 20vw;
         }
 
         .dot {
@@ -386,12 +440,17 @@ hr {
         #title {
             height: 11vh;
         }
+
+        #text9 {
+            padding-top: 1vh;
+            clear: none;
+        }
 }
 
 
 /* Desktop */
 
-@media all and (min-width: 1500px) {
+@media all and (min-width: 1300px) {
     .container {
         margin: auto;
         padding: 1vh 22vw;
@@ -430,5 +489,6 @@ hr {
         display: inline;
     }
 }
+
 
 
