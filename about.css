@@ -25,7 +25,7 @@ body {
 }
 
 #title h1 {
-    font-size: 2vw;
+    font-size: 1.8vw;
     letter-spacing: 0.04em;
     position: relative;
     animation: heading 2.5s ease forwards;
@@ -202,6 +202,7 @@ hr {
     textanimationfade 4.9s ease 4.9s forwards;
 }
 
+
 #text9 {
     margin-top: 1vh;
     padding: 0.2rem 1rem;
@@ -209,6 +210,7 @@ hr {
     position: relative;
     animation: textanimationfade 5s ease 7s forwards;
 }
+
 
 @keyframes textanimationleft {
     0% { left: -100vw; }
@@ -305,6 +307,7 @@ hr {
         padding-top: 1vh;
         clear: both;
     }
+
 }
 
 @media all and (max-width: 500px)
@@ -348,6 +351,8 @@ hr {
         padding-top: 1vh;
         clear: both;
     }
+
+
 }
 
 /* Tablets */
@@ -398,6 +403,7 @@ hr {
         padding-top: 1vh;
         clear: both;
     }
+
 }    
 
 /* Landscape */
@@ -445,6 +451,8 @@ hr {
             padding-top: 1vh;
             clear: none;
         }
+
+       
 }
 
 
@@ -488,6 +496,7 @@ hr {
     .dot {
         display: inline;
     }
+
 }
 
 
