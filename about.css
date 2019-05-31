@@ -179,7 +179,7 @@ hr {
 #text7 {
     margin-top: 1vh;
     margin-left: 10vw;
-    padding: 1rem 2rem;
+    padding: 0.2rem 1rem;
     opacity: 0;
     width: 18vw;
     float: left;
@@ -192,7 +192,7 @@ hr {
 #text8 {
     margin-top: 1vh;
     margin-right: 10vw;
-    padding: 1rem 2rem;
+    padding: 0.2rem 1rem;
     opacity: 0;
     width: 18vw;
     float: right;
@@ -208,7 +208,8 @@ hr {
     padding: 0.2rem 1rem;
     opacity: 0;
     position: relative;
-    animation: textanimationfade 5s ease 7s forwards;
+    animation: textanimationfade 5s ease 7s forwards, 
+    colorchange 7s ease-in-out 8s infinite;
 }
 
 
@@ -230,6 +231,14 @@ hr {
 @keyframes textanimationfadeline {
     0% { opacity: 0; }
     100% { opacity: 0.5; }
+}
+
+@keyframes colorchange {
+    0% { color: white }
+    10% { color: white }
+    50% { color: cyan }
+    90% { color: white }
+    100% { color: white }
 }
 
 /* Portrait */
@@ -356,7 +365,7 @@ hr {
 /* Tablets */
 
 @media all and (max-width: 800px)
-            and (min-width: 610px)
+            and (min-width: 500px)
              and (min-height: 1024px)
               and (max-height: 1280px) {
     .container {
@@ -403,6 +412,52 @@ hr {
     }
 
 }    
+
+@media all and (max-width: 595px)
+            and (min-width: 500px) {
+ .container {
+        padding: 1vw 7vw;
+        font-size: 2.3vw;
+        line-height: 2.8vw;
+    }
+
+    .dot {
+        font-size: 0.1vw;
+        padding: 0;
+        margin: 0;
+        display: none;
+    }
+
+    #title h1 {
+        font-size: 4vw;
+    }
+
+    #title {
+        height: 8vh;
+    }
+
+    @keyframes heading {
+        0% {top: -50vh}
+        100% {top: 3vh}
+    }
+
+    #text8 {
+        margin-top: 1vh;
+        margin-right: 5vw;
+        width: 30vw;
+    }
+
+    #text7 {
+        margin-top: 1vh;
+        margin-left: 5vw;
+        width: 30vw;
+    }
+
+    #text9 {
+        padding-top: 1vh;
+        clear: both;
+    }
+}
 
 /* Landscape */
 
@@ -465,11 +520,14 @@ hr {
         font-size: 1vw;
     }
 
+    #title h1 {
+        font-size: 2.7vw;
+    }
+
     #text7 {
-        display: block;
         margin-top: 1vh;
-        margin-left: 10vw;
-        padding: 1rem 2rem;
+        margin-left: 18vw;
+        padding: 0.2rem 1rem;
         opacity: 0;
         width: 18vw;
         float: left;
@@ -480,10 +538,9 @@ hr {
     }
     
     #text8 {
-        display: block;
         margin-top: 1vh;
-        margin-right: 10vw;
-        padding: 1rem 2rem;
+        margin-right: 18vw;
+        padding: 0.2rem 1rem;
         opacity: 0;
         width: 18vw;
         float: right;
@@ -512,7 +569,7 @@ hr {
         display: block;
         margin-top: 1vh;
         margin-left: 10vw;
-        padding: 1rem 2rem;
+        padding: 0.2rem 1rem;
         opacity: 0;
         width: 18vw;
         float: left;
@@ -526,7 +583,7 @@ hr {
         display: block;
         margin-top: 1vh;
         margin-right: 10vw;
-        padding: 1rem 2rem;
+        padding: 0.2rem 1rem;
         opacity: 0;
         width: 18vw;
         float: right;
@@ -545,7 +602,7 @@ hr {
 @media (min-width: 768px) and (max-width: 1024px) {
     .container {
         margin: auto;
-        padding: 1vh 21vw;
+        padding: 1vh 20vw;
         color: white;
         line-height: 1;
         font-size: 1.3vw;
@@ -554,8 +611,8 @@ hr {
     #text7 {
         display: block;
         margin-top: 1vh;
-        margin-left: 10vw;
-        padding: 1rem 2rem;
+        margin-left: 11vw;
+        padding: 0.2rem 1rem;
         opacity: 0;
         width: 18vw;
         float: left;
@@ -568,8 +625,8 @@ hr {
     #text8 {
         display: block;
         margin-top: 1vh;
-        margin-right: 10vw;
-        padding: 1rem 2rem;
+        margin-right: 11vw;
+        padding: 0.2rem 1rem;
         opacity: 0;
         width: 18vw;
         float: right;
