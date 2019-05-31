@@ -244,7 +244,7 @@ hr {
 /* Portrait */
 
 
-
+/* 
 @media all and (device-height: 640px)
             and (device-width: 384px) {
 
@@ -363,7 +363,7 @@ hr {
 }
 
 /* Tablets */
-
+/* 
 @media all and (max-width: 800px)
             and (min-width: 500px)
              and (min-height: 1024px)
@@ -457,10 +457,10 @@ hr {
         padding-top: 1vh;
         clear: both;
     }
-}
+} */
 
 /* Landscape */
-
+/* 
 @media all and (orientation: landscape) {
         @keyframes heading {
             0% {top: -50vh}
@@ -506,11 +506,11 @@ hr {
         }
 
        
-}
+} */
 
 
 /* Desktop */
-
+/* 
 @media all and (min-width: 1281px) {
     .container {
         margin: auto;
@@ -680,5 +680,314 @@ hr {
 .dot {
     display: none;
 }
+
+} */ 
+
+/* Portrait */
+
+/* smartphones, iPhone, portrait 480x320 phones */
+@media (min-width:320px) and (orientation: portrait) {
+    .container {
+        margin: auto;
+        padding: 1vh 10vw;
+        color: white;
+        line-height: 1;
+        font-size: 2.5vw;
+    }
+    
+    #title h1 {
+        font-size: 5vw;
+    }
+    
+    #text8 {
+        margin-top: 1vh;
+        margin-right: 11vw;
+        padding: 0.5rem 1rem;
+        width: 22vw;
+    }
+    
+    #text7 {
+        margin-top: 1vh;
+        padding: 0.5rem 1rem;
+        margin-left: 11vw;
+        width: 22vw;
+    }
+    
+    #text9 {
+        padding-top: 1vh;
+        clear: both;
+    }
+    
+    
+    .dot {
+        display: none;
+    }
+}
+
+ /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+@media (min-width:481px) and (orientation: portrait) { 
+   
+    .container {
+        margin: auto;
+        padding: 1vh 10vw;
+        color: white;
+        line-height: 1;
+        font-size: 2.5vw;
+    }
+    
+    #title h1 {
+        font-size: 5vw;
+    }
+    
+    #text8 {
+        margin-top: 1vh;
+        margin-right: 11vw;
+        padding: 0.5rem 1rem;
+        width: 22vw;
+    }
+    
+    #text7 {
+        margin-top: 1vh;
+        padding: 0.5rem 1rem;
+        margin-left: 11vw;
+        width: 22vw;
+    }
+    
+    #text9 {
+        padding-top: 1vh;
+        clear: both;
+    }
+    
+    
+    .dot {
+        display: none;
+    }
+}
+
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+@media (min-width:641px) and (orientation: portrait) {
+    .container {
+        margin: auto;
+        padding: 1vh 20vw;
+        color: white;
+        line-height: 1;
+        font-size: 1.3vw;
+    }
+
+    #text7 {
+        display: block;
+        margin-top: 1vh;
+        margin-left: 11vw;
+        padding: 0.2rem 1rem;
+        opacity: 0;
+        width: 18vw;
+        float: left;
+        position: relative;
+        border: 1px solid white;
+        animation: textanimationleft 3s ease 3.4s forwards,
+        textanimationfade 4.8s ease 4.9s forwards;
+    }
+    
+    #text8 {
+        display: block;
+        margin-top: 1vh;
+        margin-right: 11vw;
+        padding: 0.2rem 1rem;
+        opacity: 0;
+        width: 18vw;
+        float: right;
+        position: relative;
+        border: 1px solid white;
+        animation: textanimationright 3s ease 3.4s forwards,
+        textanimationfade 4.9s ease 4.9s forwards;
+    }
+
+
+    .dot {
+        display: inline;
+        font-size: 1vw;
+    }
+}
+ 
+/* tablet, landscape iPad, lo-res laptops ands desktops */ 
+@media (min-width:961px) and (orientation: portrait) { 
+    
+    .container {
+        margin: auto;
+        padding: 1vh 21vw;
+        color: white;
+        line-height: 1;
+        font-size: 1.2vw;
+    }
+
+    #text7 {
+        display: block;
+        margin-top: 1vh;
+        margin-left: 10vw;
+        padding: 0.2rem 1rem;
+        opacity: 0;
+        width: 18vw;
+        float: left;
+        position: relative;
+        border: 1px solid white;
+        animation: textanimationleft 3s ease 3.4s forwards,
+        textanimationfade 4.8s ease 4.9s forwards;
+    }
+    
+    #text8 {
+        display: block;
+        margin-top: 1vh;
+        margin-right: 10vw;
+        padding: 0.2rem 1rem;
+        opacity: 0;
+        width: 18vw;
+        float: right;
+        position: relative;
+        border: 1px solid white;
+        animation: textanimationright 3s ease 3.4s forwards,
+        textanimationfade 4.9s ease 4.9s forwards;
+    }
+
+
+    .dot {
+        display: inline;
+    }
+}
+
+/* big landscape tablets, laptops, and desktops */
+@media (min-width:1025px) and (orientation: portrait) {
+    .container {
+        margin: auto;
+        padding: 1vh 21vw;
+        color: white;
+        line-height: 1;
+        font-size: 1.2vw;
+    }
+
+    #text7 {
+        display: block;
+        margin-top: 1vh;
+        margin-left: 10vw;
+        padding: 0.2rem 1rem;
+        opacity: 0;
+        width: 18vw;
+        float: left;
+        position: relative;
+        border: 1px solid white;
+        animation: textanimationleft 3s ease 3.4s forwards,
+        textanimationfade 4.8s ease 4.9s forwards;
+    }
+    
+    #text8 {
+        display: block;
+        margin-top: 1vh;
+        margin-right: 10vw;
+        padding: 0.2rem 1rem;
+        opacity: 0;
+        width: 18vw;
+        float: right;
+        position: relative;
+        border: 1px solid white;
+        animation: textanimationright 3s ease 3.4s forwards,
+        textanimationfade 4.9s ease 4.9s forwards;
+    }
+
+
+    .dot {
+        display: inline;
+    }
+}
+
+ /* hi-res laptops and desktops */
+@media (min-width:1281px) and (orientation: portrait) { 
+    .container {
+        margin: auto;
+        padding: 1vh 22vw;
+        color: white;
+        line-height: 1;
+        font-size: 1vw;
+    }
+
+    #title h1 {
+        font-size: 2.7vw;
+    }
+
+    #text7 {
+        margin-top: 1vh;
+        margin-left: 18vw;
+        padding: 0.2rem 1rem;
+        opacity: 0;
+        width: 18vw;
+        float: left;
+        position: relative;
+        border: 1px solid white;
+        animation: textanimationleft 3s ease 3.4s forwards,
+        textanimationfade 4.8s ease 4.9s forwards;
+    }
+    
+    #text8 {
+        margin-top: 1vh;
+        margin-right: 18vw;
+        padding: 0.2rem 1rem;
+        opacity: 0;
+        width: 18vw;
+        float: right;
+        position: relative;
+        border: 1px solid white;
+        animation: textanimationright 3s ease 3.4s forwards,
+        textanimationfade 4.9s ease 4.9s forwards;
+    }
+
+    .dot {
+        display: inline;
+    }
+}
+
+/* Landscape */
+
+@media screen and (orientation:landscape) {
+
+    @keyframes heading {
+        0% {top: -50vh}
+        100% {top: 4vh}
+    }  
+    
+    .container {
+        font-size: 1.6vw;
+        padding: 1.1vh 10vw;
+        margin: 0 auto;
+        line-height: 3.5vh;
+    }
+
+    #text8 {
+        margin-top: 1vh;
+        padding: 0.2rem 1rem;
+        margin-right: 6vw;
+        width: 20vw;
+    }
+
+    #text7 {
+        margin-top: 1vh;
+        padding: 0.2rem 1rem;
+        margin-left: 6vw;
+        width: 20vw;
+    }
+
+    .dot {
+        display: none;
+    }
+
+    #title h1 {
+        font-size: 3vw;
+    }
+
+    #title {
+        height: 11vh;
+    }
+
+    #text9 {
+        padding-top: 1vh;
+        clear: none;
+    }
 
 }
