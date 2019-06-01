@@ -14,10 +14,8 @@ const subtextdiv = document.getElementById('subtextdiv')
 // Sub Text Line Two 
 const stextOne = document.getElementById('stextone')
 
-
 // Learn More Button
 const learnbtn = document.getElementById('btnhide')
-
 
 // Cursor mapping Variables
 const cursor = {
