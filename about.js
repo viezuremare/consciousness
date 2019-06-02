@@ -20,3 +20,11 @@ t8.addEventListener('mouseleave', () => {
     t8.style.cursor = 'default'
     t8.style.backgroundColor = 'darkcyan'
 })
+
+t7.addEventListener('mouseup', () => {
+    window.location.href='index.html'
+})
+
+t8.addEventListener('mouseup', () => {
+    window.location.href='index.html'
+})

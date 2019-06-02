@@ -479,7 +479,7 @@ hr {
     .container {
         margin: auto;
         padding: 1vh 22vw;
-        color: white;
+        color: yellow;
         line-height: 1;
         font-size: 1vw;
     }
@@ -521,7 +521,7 @@ hr {
 
 /* Landscape */
 
-@media screen and (orientation:landscape) {
+@media (orientation:landscape) {
 
     @keyframes heading {
         0% {top: -50vh}
@@ -533,6 +533,7 @@ hr {
         padding: 1.1vh 10vw;
         margin: 0 auto;
         line-height: 3.5vh;
+        color: red;
     }
 
     #text8 {
@@ -564,6 +565,10 @@ hr {
     #text9 {
         padding-top: 1vh;
         clear: none;
+    }
+
+    body {
+        touch-action: auto;
     }
 
 }
