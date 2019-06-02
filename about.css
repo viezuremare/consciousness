@@ -521,7 +521,145 @@ hr {
 
 /* Landscape */
 
-@media (orientation:landscape) {
+/* @media  (min-width:961px) and (orientation:landscape) {
+    @keyframes heading {
+        0% {top: -50vh}
+        100% {top: 4vh}
+    }  
+    
+    .container {
+        font-size: 1.6vw;
+        padding: 1.1vh 10vw;
+        margin: 0 auto;
+        line-height: 3.5vh;
+        color: white;
+    }
+
+    #text8 {
+        margin-top: 1vh;
+        padding: 0.2rem 1rem;
+        margin-right: 6vw;
+        width: 20vw;
+    }
+
+    #text7 {
+        margin-top: 1vh;
+        padding: 0.2rem 1rem;
+        margin-left: 6vw;
+        width: 20vw;
+    }
+
+    .dot {
+        display: none;
+    }
+
+    #title h1 {
+        font-size: 3vw;
+    }
+
+    #title {
+        height: 11vh;
+    }
+
+    #text9 {
+        padding-top: 1vh;
+        clear: none;
+    }
+}
+
+@media  (min-width:641px) and (orientation:landscape) {
+    @keyframes heading {
+        0% {top: -50vh}
+        100% {top: 4vh}
+    }  
+    
+    .container {
+        font-size: 1.6vw;
+        padding: 1.1vh 10vw;
+        margin: 0 auto;
+        line-height: 3.5vh;
+        color: white;
+    }
+
+    #text8 {
+        margin-top: 1vh;
+        padding: 0.2rem 1rem;
+        margin-right: 6vw;
+        width: 20vw;
+    }
+
+    #text7 {
+        margin-top: 1vh;
+        padding: 0.2rem 1rem;
+        margin-left: 6vw;
+        width: 20vw;
+    }
+
+    .dot {
+        display: none;
+    }
+
+    #title h1 {
+        font-size: 3vw;
+    }
+
+    #title {
+        height: 11vh;
+    }
+
+    #text9 {
+        padding-top: 1vh;
+        clear: none;
+    }
+}
+
+@media (min-width:481px) and (orientation:landscape) {
+    @keyframes heading {
+        0% {top: -50vh}
+        100% {top: 4vh}
+    }  
+    
+    .container {
+        font-size: 1.6vw;
+        padding: 1.1vh 10vw;
+        margin: 0 auto;
+        line-height: 3.5vh;
+        color: white;
+    }
+
+    #text8 {
+        margin-top: 1vh;
+        padding: 0.2rem 1rem;
+        margin-right: 6vw;
+        width: 20vw;
+    }
+
+    #text7 {
+        margin-top: 1vh;
+        padding: 0.2rem 1rem;
+        margin-left: 6vw;
+        width: 20vw;
+    }
+
+    .dot {
+        display: none;
+    }
+
+    #title h1 {
+        font-size: 3vw;
+    }
+
+    #title {
+        height: 11vh;
+    }
+
+    #text9 {
+        padding-top: 1vh;
+        clear: none;
+    }
+} */
+
+/* @media (min-width:320px) and (orientation:landscape) {
 
     @keyframes heading {
         0% {top: -50vh}
@@ -566,10 +704,5 @@ hr {
         padding-top: 1vh;
         clear: none;
     }
-
-    body {
-        touch-action: auto;
-    }
-
-}
+} */
 
