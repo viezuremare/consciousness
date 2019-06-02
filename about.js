@@ -12,19 +12,23 @@ t7.addEventListener('mouseleave', () => {
 })
 
 t8.addEventListener('mouseover', () => {
+    console.log("e")
     t8.style.cursor = 'pointer'
     t8.style.backgroundColor = 'rgba(3, 95, 95, 0.2)'
 })
 
 t8.addEventListener('mouseleave', () => {
+    console.log("l")
     t8.style.cursor = 'default'
     t8.style.backgroundColor = 'darkcyan'
 })
 
 t7.addEventListener('mouseup', () => {
+    console.log("u")
     window.location.href='index.html'
 })
 
 t8.addEventListener('mouseup', () => {
     window.location.href='index.html'
+    console.log("y")
 })
