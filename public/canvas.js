@@ -417,8 +417,8 @@ setTimeout(() => {
     instr[i].classList.remove('fadeoutslow')
     instr[i].classList.add('fadein') 
     }
-    instr[0].innerHTML = ""
-    instr[1].innerHTML = "It's full of thoughts."
+    instr[0].innerHTML = "It's full of"
+    instr[1].innerHTML = "wandering thoughts."
 }, 8000);
 
 // Fade Out Sub Text
@@ -435,7 +435,7 @@ setTimeout(() => {
     instr[i].classList.remove('fadeoutslow')
     instr[i].classList.add('fadein') 
     }
-    instr[0].innerHTML = 'For a brief moment'
+    instr[0].innerHTML = 'But for a brief moment'
     instr[1].innerHTML = 'they will fade away'
 }, 13000);
 
