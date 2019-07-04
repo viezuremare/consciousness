@@ -190,7 +190,7 @@ function init() {
 
 let circleArray = []
 function initMulti() {
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 50; i++) {
         
     circleArray.push(new CircleMulti(
                         Math.random() * window.innerWidth,
